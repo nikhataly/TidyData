@@ -18,7 +18,7 @@ dataTable <- cbind(subAll, YAll, XAll)
 
 featNames <- read.table("./Dataset/features.txt")
 featNamesVec <- as.vector(t(featNames)[2, ])
-col2 <- c("Subject ID", "Activity")
+col2 <- c("Subject", "Activity")
 AllNames <- c(col2, featNamesVec)
 colnames(dataTable) <- AllNames
 
@@ -30,4 +30,5 @@ vec4 <- c(vec1, vec2, vec3)
 filteredData <- dataTable[, vec4]
 
 # Creating a second data set with means for each activity for each subject
-
+library(plyr)
+meanData <- ddply(filteredData, c("Subject", "Activity"), numcolwise(mean))
