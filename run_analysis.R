@@ -34,5 +34,5 @@ library(plyr)
 meanData <- ddply(filteredData, c("Subject", "Activity"), numcolwise(mean))
 
 # Writing tidy data set to file
-write.table(meanData, file = "Mean-Data", row.name=FALSE)
+write.table(meanData, file = "Mean-Data.txt", row.name=FALSE)
 
