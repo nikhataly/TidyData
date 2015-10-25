@@ -20,3 +20,14 @@ dataTable <- cbind(subAll, YAll, XAll)
 featNames <- read.table("./Dataset/features.txt")
 
 featNamesVec <- as.vector(t(featNames)[2, ])
+col2 <- c("Subject ID", "Activity")
+AllNames <- c(col2, featNamesVec)
+
+colnames(dataTable) <- AllNames
+
+vec1 <- c(1, 2)
+vec2 <- c(2) + grep("mean+", featNamesVec)
+vec3 <- c(2) + grep("std+", featNamesVec)
+vec4 <- c(vec1, vec2, vec3)
+
+filteredData <- dataTable[, vec4]
