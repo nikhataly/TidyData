@@ -32,3 +32,7 @@ filteredData <- dataTable[, vec4]
 # Creating a second data set with means for each activity for each subject
 library(plyr)
 meanData <- ddply(filteredData, c("Subject", "Activity"), numcolwise(mean))
+
+# Writing tidy data set to file
+write.table(meanData, file = "Mean-Data", row.name=FALSE)
+
