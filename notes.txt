@@ -1,0 +1,5 @@
+Sources:
+
+This page was used as a guideline for completing the assignment: https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/
+
+Hadley Wickham's Tidy Data paper was used for reference: http://vita.had.co.nz/papers/tidy-data.pdf
